@@ -131,4 +131,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+## X-XSS-Protection
+SECURE_BROWSER_XSS_FILTER = True
+
+SECURE_SSL_REDIRECT = True 
+
+# for more security
+CSRF_COOKIE_SECURE = True
+CSRF_USE_SESSIONS = True
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'Strict'
+
 django_heroku.settings(locals())
